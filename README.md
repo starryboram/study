@@ -1,6 +1,5 @@
 # 🧠 Data Analysis
-## 01. Data Analysis_fastcampus
-* 
+## Data Analysis_Project
 *
 *
 *
@@ -11,7 +10,7 @@
 
 
 # 🧠 Machine Learning Study
-## 01. Machine Learning_fastcampus
+## 01. Machine Learning_Theory
 * About Machine Learning
 * About Sklearn and How to EDA
 * Sklearn Classification Modeling, Test
@@ -20,7 +19,7 @@
 * Sklearn hyperparameter Tunning
 * Sklearn PCA etc
 
-## 02. Machine Learning_boostcourse
+## 02. Machine Learning_Project
 * Machine Learning using shopping data
 *
 *
@@ -29,10 +28,16 @@
 *
 
 # 🧠 Deep Learning Study
-## 01. Deep Learning_boostcourse
+## 01. Deep Learning_Theory
 * Introduce deep learning
 *
 *
+*
+*
+*
+*
+
+## 02. Deep Learning_Project
 *
 *
 *
