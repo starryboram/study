@@ -1,14 +1,3 @@
-# 🧠 Data Analysis
-## Data Analysis_Project
-*
-*
-*
-*
-*
-*
-*
-
-
 # 🧠 Machine Learning Study
 ## 01. Machine Learning_Theory
 * About Machine Learning
