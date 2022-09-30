@@ -38,7 +38,13 @@ null값을 처리할 때에는 데이터 대비 얼마나 null값이 차지하�
 결측값의 뒷 행 값으로 대체| data.fillna(method='bfill') 혹은 data.fillna(method='backfill')
 특정값으로 결측치 대체| data.fillna('특정값')
 ## ✍ 02. 정규화/표준화 작업
+* 수치형 데이터 전처리에서 사용되는 요소
+* 해야 하는 이유: 학습 데이터의 feature 간 단위나 스케일(scale) 차이가 클 수록 학습 모델의 성능이 저하될 수 있음. 따라서 데이터의 단위를 맞춰주는 작업이 필요함. 이를 scaling이라고 말함.
+* scaling 방법
+1) 정규화(Normalization) : 구간을 정해줘야 하며, 0~1사이로 만들어줌 예) Min-Max Scaler
 
+2) 표준화(Standardization): 평균이 0이 되고 표준편차가 1이 됨
+![image](https://user-images.githubusercontent.com/102525066/193292463-db8e59b2-9503-4b97-b496-30e5633ae622.png)
 
 ## ✍ 03. 범주형 데이터 처리
 범주형 데이터의 경우에는 수치형 데이터로 변환을 해줘야 함
