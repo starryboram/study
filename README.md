@@ -10,26 +10,14 @@
 
 ## 02. Machine Learning_Project
 * Machine Learning using shopping data
-*
-*
-*
-*
-*
+
 
 # 🧠 Deep Learning Study
 ## 01. Deep Learning_Theory
 * Introduce deep learning
-*
-*
-*
-*
-*
-*
+
 
 ## 02. Deep Learning_Project
 *
-*
-*
-*
-*
+
 
