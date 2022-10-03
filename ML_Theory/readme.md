@@ -111,7 +111,7 @@ df = pd.DataFrame({'item': ['김밥', '떡볶이', '새우튀김', '김말이튀
 pd.get_dummies(df)
 ```
 
-이 외에도 여러 encoding 방식이 있음. 더 많은 정보를 보고 싶을 경우 
+다양한 encoding 방식 : https://github.com/starryboram/study/blob/main/ML_Theory/Endoding%20Method.md 
 ## ✍ 04. train/test set 분리
 
 
