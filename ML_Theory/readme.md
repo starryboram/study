@@ -113,7 +113,10 @@ pd.get_dummies(df)
 
 다양한 encoding 방식 : https://github.com/starryboram/study/blob/main/ML_Theory/Endoding%20Method.md 
 ## ✍ 04. train/test set 분리
+* scikit-learn의 경우 train test split을 통해 학습/테스트 세트를 자동으로 분할해주는 기능을 제공함
+* 이때, 데이터 비율은 임의적으로 적용이 가능하며 보통 8:2를 많이 사용함
 
-
-## ✍ 05. Feature Engineering
+```python
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, shuffle=True)
+```
 
