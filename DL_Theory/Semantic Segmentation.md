@@ -23,11 +23,11 @@
 * 다만, 계산 상으로 편하기 때문에 쓰이는 방법정도로 생각하기
 
 ## 🧨 Detaction 1: R-CNN
+* 목표: FCN 방법 말고 검출하는 방식으로 접근해보자
+* 방법
 1. 이미지에서 약 2000개의 영역을 뽑아냄(알고리즘에 의해 뽑아냄)
 2. 똑같은 크기로 맞춤(AlexNet 이용- Alexnet 2000번 들어간다고 생각하기)
 3. Linear SVM을 이용해서 분류
-
-* 정확하진 않지만, 그래도 검출해낼 수 있다는 것에 의의가 있음
 * 단점: 이미지 안에서 2000개의 영역을 뽑으면 2000번을 CNN에 통과시켜야함 -> CPU 처리 속도가 1분이 나옴 -> 해결 필요
 
 ## 🧨 Detaction 2: SPPNet(Spatial Pyramid Pooling Network)
@@ -38,6 +38,32 @@
 3. 뽑힌 bounding box에 해당하는 convolution feature tensor만 끌고 와서 CNN을 계산(CNN 1번만 사용)
 
 ## 🧨 Detaction 3: Fast R-CNN
+* 목표: SPPNet과 방식은 비슷하지만 좀 더 좋게 만들어보자 -> Neural Network 써보자
+* 방법
+1. 이미지에서 bounding box 약 2000개를 추출
+2. CNN을 1번 통과 시킴
+3. 각각의 region에 대해서 ROI Pooling을 통해 fixed length feature을 뽑음
+4. Neural Network를 통해서 bounding box를 어떻게 움직이면 좋을지 라벨을 찾음
 
+## 🧨 Detaction 4: Faster R-CNN
+* 목표: bouding box를 뽑아내는 것을 Region Propasal Network를 통해서 학습을 시키자
+* 방법: Region Propasal Network + Fast R-CNN
+* RPN(Region Propasal Network)의 궁극적인 목표
+→ bounding box로써의 의미가 있을지 없을지(물체가 있을지 없을지)를 찾아주는 것
+→ 핵심: anchor box의 크기(template 활용도)
+![image](https://user-images.githubusercontent.com/102525066/194123085-d55da281-dea5-4d53-b56e-ad84a8ce0e0a.png)
+![image](https://user-images.githubusercontent.com/102525066/194123356-63eb6ba4-be25-4699-83ae-554e4f5fea24.png)
 
-네이버 부스트코스 강의: 
+→ 여기서도 역시나 FCN은 활용됨 (54개의 channel이 도출 됨: 9*4+2)
+
+## 🧨 Detaction 5: YOLO(v1)
+* Bounding box를 뽑는 절차가 없어서 Faster R-CNN보다 훨씬빠름
+* 방법
+1. 이미지가 들어오면 S×S 격자형태로 나눔
+2. 이미지 중앙에 해당 grid 안에 들어가면, 해당 물체의 bounding box와 해당 물체가 무엇인지 같이 예측해줌
+3. B(=5)개의 bounding box를 예측해줌(bounding box의 x,y,w,h를 찾아주고 쓸모있는지 없는지 알아냄)
+4. 3번과 동시에 Class(C) 예측을 진행
+5. 3번과 4번의 정보를 취합해서 box위치와 box가 무엇인지를 동시에 보여주는 형식
+* **즉, S×S×(B*5+C) size tesnsor**
+
+##### 참고 강의: https://www.boostcourse.org/ai111
