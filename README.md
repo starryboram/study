@@ -1,12 +1,14 @@
 # 🧠 Machine Learning Study
 ## 01. Machine Learning_Theory
-* About Machine Learning
-* About Sklearn and How to EDA
-* Sklearn Classification Modeling, Test
-* Sklearn Regression Modeling, Test
-* Sklearn Essemble Modeling
-* Sklearn hyperparameter Tunning
-* Sklearn PCA etc
+* Introduce Machine Learning(readme)
+* Encoding methods
+*
+*
+*
+*
+*
+*
+
 
 ## 02. Machine Learning_Project
 * Machine Learning using shopping data
@@ -14,7 +16,7 @@
 
 # 🧠 Deep Learning Study
 ## 01. Deep Learning_Theory
-* Introduce deep learning(readme)
+* Introduce Deep Learning(readme)
 * Optimization
 *
 *
