@@ -14,7 +14,13 @@
 
 # 🧠 Deep Learning Study
 ## 01. Deep Learning_Theory
-* Introduce deep learning
+* Introduce deep learning(readme)
+* Optimization
+*
+*
+*
+*
+* Semantic Segmentation
 
 
 ## 02. Deep Learning_Project
